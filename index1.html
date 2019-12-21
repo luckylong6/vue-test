@@ -13,14 +13,22 @@
     <div id="example_2" class="demo">
         <span v-if="greeting">Hello!</span>
     </div>
+
     <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
     <script>
-        var exampleVM2 = new Vue({
-            el: '#example_2',
+        var vm = new Vue({
+            el: '#example',
             data:{
-                greeting:false
-            }
+                a:1
+            },
         })
+        
+        // var exampleVM2 = new Vue({
+        //     el: '#example_2',
+        //     data:{
+        //         greeting:false
+        //     }
+        // })
         // var exampleData = {
         //     name: '小哥哥'
         // }
