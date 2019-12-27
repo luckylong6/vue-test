@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>条件渲染</title>
+</head>
+<body>
+    <h1 v-if="ok">Yes</h1>
+    <h1 v-else>No</h1>
+    <template v-if="ok">
+        <h1>Title</h1>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+    </template>
+
+    <div id="demo">
+        <div v-if="mes">
+            Sorry
+        </div>
+        <div v-else>
+            Not sorry
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <script>
+        var vm = new Vue({
+            el:'#demo',
+            data:{
+                mes : Math.random()>0.5,
+            },
+            created(){
+                console.log('bb');
+            },
+            mounted(){
+                console.log('aa');
+            }
+        })
+
+    </script>
+</body>
+</html>

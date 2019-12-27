@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>class与style绑定</title>
+</head>
+<body>
+    <!-- <div id="demo" class="static" v-bind:class="{'classA':isA, 'classB':isB}">
+        aaaa
+    </div>
+    <div id="demo1" class="static" v-bind:class="[classA, classB]">
+        aaaa
+    </div> -->
+
+    <!-- <div id="style-1" v-bind:style="{color:activeColor, fontSize:fontSize}">
+        aaa
+    </div> -->
+    <div id="style-1" v-bind:style="[styleObjectA, styleObjectB]">
+        aaa
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        // var st = new Vue({
+        //     el:'#style-1',
+        //     data:{
+        //         // styleObject:{
+        //             activeColor:'blue',
+        //             fontSize:'30px'
+        //         // }
+        //     }
+        // })
+        var st = new Vue({
+            el:'#style-1',
+            data:{
+                styleObjectA:{
+                    color: 'black',
+                    fontSize:'40px'
+                },
+                styleObjectB:{
+                    backgroundColor: 'blue',
+                }
+            }
+        })
+    </script>
+
+    <!-- <script>
+        var vm = new Vue({
+            el:'#demo1',
+            data:{
+                classA: 'class-a',
+                classB: 'class-b',
+            }
+        })
+    </script>
+    <script>
+        $('.class-a').css('color', 'red');
+    </script> -->
+
+</body>
+</html>
